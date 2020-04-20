@@ -14,3 +14,8 @@ WIN_COMBINATIONS = [
   [0, 4, 8],
   [2, 4, 6]
 ]
+
+def won(board)
+  filled = board.select { |i| i.nil? || i.strip == " "}
+  WIN_COMBINATIONS.includes?(filled)
+end
