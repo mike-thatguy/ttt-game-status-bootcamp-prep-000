@@ -15,7 +15,12 @@ WIN_COMBINATIONS = [
   [2, 4, 6]
 ]
 
-def won(board)
+def won?(board)
+  filled_idx = board.each_index.select { |i| i == "X" }
+  WIN_COMBINATIONS.detect(filled_idx)
+end
+
+def over?(board)
   filled_idx = board.each_index.select { |i| i == "X" }
   WIN_COMBINATIONS.includes?(filled)
 end
