@@ -17,7 +17,12 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   filled_idx = board.each_index.select { |i| i == "X" }
-  WIN_COMBINATIONS.detect(filled_idx)
+  winner = WIN_COMBINATIONS.detect(filled_idx)
+  if !winner.empty?
+    return winner
+  else
+    return false
+  end
 end
 
 def over?(board)
