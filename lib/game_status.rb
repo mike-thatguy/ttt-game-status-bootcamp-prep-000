@@ -16,6 +16,6 @@ WIN_COMBINATIONS = [
 ]
 
 def won(board)
-  filled = board.select { |i| i.nil? || i.strip == " "}
+  filled_idx = board.each_index.select { |i| i == "X" }
   WIN_COMBINATIONS.includes?(filled)
 end
