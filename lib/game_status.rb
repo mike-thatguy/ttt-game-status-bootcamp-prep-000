@@ -31,6 +31,5 @@ def full?(board)
 end
 
 def over?(board)
-  filled_idx = board.each_index.select { |i| i == "X" }
-  WIN_COMBINATIONS.includes?(filled_idx)
+  full?(board) || !(won?.nil?)
 end
