@@ -21,7 +21,7 @@ def won?(board)
   x_won = WIN_COMBINATIONS.detect(filled_x)
   o_won = WIN_COMBINATIONS.detect(filled_o)
   return x_won if !x_won.nil?
-  return o_wom if !o_won.nil?
+  return o_won if !o_won.nil?
   return nil
 end
 
