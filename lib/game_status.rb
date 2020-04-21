@@ -16,13 +16,20 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  filled_x = board.each_index.select { |i| i == "X" }
-  filled_o = board.each_index.select { |i| i == "O" }
-  x_won = WIN_COMBINATIONS.detect(filled_x)
-  o_won = WIN_COMBINATIONS.detect(filled_o)
-  return x_won if !x_won.nil?
-  return o_won if !o_won.nil?
-  return nil
+  winning_combo = []
+  WIN_COMBINATIONS.each do |idxs| 
+    if idxs.all? { |x| x == "X" }
+      winning_combo = idxs
+    elsif idxs.all? { |x| x == "O" }
+      winning_combo = idxs
+    end
+  end
+
+  if winning_combo == []
+    return nil
+  else
+    return winning_combo
+  end
 end
 
 def full?(board)
