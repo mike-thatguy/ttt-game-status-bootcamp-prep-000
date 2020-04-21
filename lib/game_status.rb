@@ -38,7 +38,7 @@ def draw?(board)
   full?(board) && won?(board).nil?
 end
 
-def winner?(board)
+def winner(board)
   winning_combo = won?(board)
   return nil if winning.combo.nil?
   return board[winning_combo[0]]
