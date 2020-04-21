@@ -26,7 +26,7 @@ def won?(board)
 end
 
 def full?(board)
-  filled_either = board.each_index.select { |i| i == "X" || i == "O" }
+  filled_either = board.select { |i| i == "X" || i == "O" }
   filled_either.length == 9
 end
 
