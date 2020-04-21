@@ -21,7 +21,7 @@ def won?(board)
   x_won = WIN_COMBINATIONS.detect(filled_x)
   o_won = WIN_COMBINATIONS.detect(filled_o)
   case true
-  when x_won.empty? && o_won.empty? then 
+  when x_won.empty? && o_won.empty? then
   end
 end
 
