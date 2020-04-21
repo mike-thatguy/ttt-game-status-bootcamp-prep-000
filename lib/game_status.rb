@@ -16,13 +16,18 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  filled_idx = board.each_index.select { |i| i == "X" }
-  winner = WIN_COMBINATIONS.detect(filled_idx)
-  if !winner.empty?
-    return winner
-  else
-    return false
+  filled_x = board.each_index.select { |i| i == "X" }
+  filled_o = board.each_index.select { |i| i == "O" }
+  x_won = WIN_COMBINATIONS.detect(filled_x)
+  o_won = WIN_COMBINATIONS.detect(filled_o)
+  case true
+  when x_won.empty? && o_won.empty? then 
   end
+end
+
+def full?(board)
+  filled_either = board.each_index.select { |i| i == "X" || i == "O" }
+  filled_either.length == 9
 end
 
 def over?(board)
