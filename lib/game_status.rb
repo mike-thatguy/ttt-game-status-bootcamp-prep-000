@@ -31,7 +31,7 @@ def full?(board)
 end
 
 def over?(board)
-  full?(board) || !(won?.nil?)
+  full?(board) || !(won?(board).nil?)
 end
 
 def draw?(board)
