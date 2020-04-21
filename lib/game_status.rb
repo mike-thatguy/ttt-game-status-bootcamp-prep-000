@@ -33,3 +33,6 @@ end
 def over?(board)
   full?(board) || !(won?.nil?)
 end
+
+def draw?(board)
+  full?(board) && won?(board).nil?
