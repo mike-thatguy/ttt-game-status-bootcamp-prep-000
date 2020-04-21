@@ -1,6 +1,6 @@
 require_relative '../lib/game_status.rb'
 
-board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+board = ["X", "X", "X", " ", " ", " ", " ", " ", " "]
 puts "Nil is #{won?(board).nil?}"
 
 describe "./lib/game_status.rb" do
