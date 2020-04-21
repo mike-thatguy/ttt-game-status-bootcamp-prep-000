@@ -1,8 +1,5 @@
 require_relative '../lib/game_status.rb'
 
-board = ["X", "X", "X", " ", " ", " ", " ", " ", " "]
-puts "Nil is #{won?(board).nil?}"
-
 describe "./lib/game_status.rb" do
   describe 'WIN_COMBINATIONS' do
     it 'defines a constant WIN_COMBINATIONS with arrays for each win combination' do
