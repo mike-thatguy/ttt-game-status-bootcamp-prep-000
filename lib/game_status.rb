@@ -20,9 +20,9 @@ def won?(board)
   filled_o = board.each_index.select { |i| i == "O" }
   x_won = WIN_COMBINATIONS.detect(filled_x)
   o_won = WIN_COMBINATIONS.detect(filled_o)
-  case true
-  when x_won.empty? && o_won.empty? then
-  end
+  return x_won if !x_won.nil?
+  return o_wom if !o_won.nil?
+  return nil
 end
 
 def full?(board)
